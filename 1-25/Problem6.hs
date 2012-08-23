@@ -4,8 +4,11 @@
 -- Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
 
+sumSquares :: (Enum a, Num a) => a -> a
 sumSquares n = sum [x^2 | x <- [1..n]]
+squaresSum :: (Enum a, Num a) => a -> a
 squaresSum n = (sum [x | x <- [1..n]])^2
 
 -- Run the function as such: diffSquaresSum 100
+diffSquaresSum :: (Enum a, Num a) => a -> a
 diffSquaresSum n = (squaresSum n) - (sumSquares n)

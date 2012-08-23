@@ -2,9 +2,11 @@
 -- What is the 10001st prime number?
 
 
+isPrime :: Integral a => a -> Bool
 isPrime k = null [x | x <- [2..k - 1], k `mod` x == 0]
 
 -- Run the function as such: diffSquaresSum 0 0 10001 (It will take some time to brute force)
+nthPrime :: (Eq a1, Integral a, Num a1) => a -> a1 -> a1 -> a
 nthPrime k n t = if isPrime k
     then if (n - 1) == t
         then k
