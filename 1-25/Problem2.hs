@@ -7,7 +7,7 @@
 sumEvenFib :: Integral a => a -> a -> a -> a
 sumEvenFib 0 0 x = sumEvenFib 1 1 0
 sumEvenFib f1 f2 x = if f1 > 4000000
-                     then x
-                     else if even f1
-                         then sumEvenFib f2 (f1 + f2) (x + f1)
-                         else sumEvenFib f2 (f1 + f2) x
+    then x
+    else if even f1
+        then sumEvenFib f2 (f1 + f2) (x + f1)
+        else sumEvenFib f2 (f1 + f2) x
