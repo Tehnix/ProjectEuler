@@ -28,3 +28,6 @@ nums = "731671765313306249192251196744265747423553491949349698352031277450632623
 converToInt x1 x2 x3 x4 x5 = product [(digitToInt x1), (digitToInt x2), (digitToInt x3), (digitToInt x4), (digitToInt x5)]
 largestProduct = maximum [converToInt (nums!!x) (nums!!(x+1)) (nums!!(x+2)) (nums!!(x+3)) (nums!!(x+4)) | x <- [0..995]]
 
+-- main :: IO ()
+-- main = print (largestProduct)
+

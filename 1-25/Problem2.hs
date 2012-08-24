@@ -11,3 +11,6 @@ sumEvenFib f1 f2 x = if f1 > 4000000
     else if even f1
         then sumEvenFib f2 (f1 + f2) (x + f1)
         else sumEvenFib f2 (f1 + f2) x
+        
+-- main :: IO ()
+-- main = print (sumEvenFib 0 0 0)

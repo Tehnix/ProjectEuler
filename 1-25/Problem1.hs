@@ -9,3 +9,6 @@ nNum x 1000 = x
 nNum x n = if (n `mod` 3) == 0 || (n `mod` 5) == 0
     then nNum (x+n) (n+1) 
     else nNum x (n+1)
+    
+-- main :: IO ()
+-- main = print (nNum 0 1)

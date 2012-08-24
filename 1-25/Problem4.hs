@@ -23,3 +23,6 @@ nPalindrome n c l = if even (length (show (n * c))) && isPalindrome (n * c)
 -- Run the function as such: maxPalindrom
 maxPalindrom :: Integer
 maxPalindrom = maximum (nPalindrome 999 999 [])
+
+-- main :: IO ()
+-- main = print (maxPalindrom)

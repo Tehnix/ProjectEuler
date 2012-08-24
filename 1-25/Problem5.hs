@@ -11,3 +11,6 @@ nSmallDivide 0 = nSmallDivide 1
 nSmallDivide n = if isDivisible n
     then n
     else nSmallDivide (n+1)
+    
+-- main :: IO ()
+-- main = print (nSmallDivide 232792540)

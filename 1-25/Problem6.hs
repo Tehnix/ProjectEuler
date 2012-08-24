@@ -12,3 +12,6 @@ squaresSum n = (sum [x | x <- [1..n]])^2
 -- Run the function as such: diffSquaresSum 100
 diffSquaresSum :: (Enum a, Num a) => a -> a
 diffSquaresSum n = (squaresSum n) - (sumSquares n)
+
+-- main :: IO ()
+-- main = print (diffSquaresSum 100)
