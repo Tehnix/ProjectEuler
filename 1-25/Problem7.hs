@@ -8,10 +8,13 @@ square k = truncate (sqrt $ fromIntegral k)
 isPrime :: Integral a => a -> Bool
 isPrime k = null [x | x <- [2..(square k)], k `rem` x == 0]
 
--- Run the function as such: diffSquaresSum 0 0 10001 (It will take some time to brute force)
+-- Run the function as such: nthPrime 0 0 10001 (It will take some time to brute force)
 nthPrime :: (Eq a1, Integral a, Num a1) => a -> a1 -> a1 -> a
 nthPrime k n t = if isPrime k
     then if (n - 1) == t
         then k
         else nthPrime (k + 1) (n + 1) t
     else nthPrime (k + 1) n t
+    
+-- main :: IO ()
+-- main = print (nthPrime 0 0 10001)
