@@ -1,11 +1,8 @@
 <?php
 
 function isPrime($n) {
-    if ($n === 2) {
-        return true;
-    }
-    for ($i=3; $i <= (sqrt($n)+1); $i += 2) {
-        if ($n % $i === 0 && $n !== $i) {
+    for ($i=2; $i <= (sqrt($n)+1); $i++) {
+        if ($n % $i == 0 && $n != $i) {
             return false;
         }
     }
@@ -14,6 +11,9 @@ function isPrime($n) {
 
 function consecutivePrimeSum($maxSum, $currentSum, $currentNumber) {
     while (($currentSum + $currentNumber) < $maxSum) {
+        if (($currentSum + $currentNumber) > $maxSum) {
+            break;
+        }
         if (isPrime($currentNumber)) {
             $currentSum += $currentNumber;
         }
