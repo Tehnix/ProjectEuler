@@ -3,4 +3,4 @@ digitList = [37107287533902102798797998220837590246510135740250,4637693767749000
 cutSumOfList = sum digitList
 
 -- main :: IO ()
--- main = print (cutSumOfList 10 digitList)
+-- main = print (cutSumOfList digitList)

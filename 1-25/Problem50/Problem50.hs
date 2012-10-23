@@ -8,7 +8,8 @@ square :: (Integral b, Integral a) => a -> b
 square k = truncate (sqrt $ fromIntegral k)
 
 isPrime :: Integral a => a -> Bool
-isPrime k = null [x | x <- [2..(square k)], k `rem` x == 0]
+isPrime 2 = True
+isPrime k = null [x | x <- [3,5..(square k)], k `rem` x == 0]
 
 
 -- NOTE: The 6 as a starting point instead of 0 comes from empirical testing. The longest 

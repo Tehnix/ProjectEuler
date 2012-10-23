@@ -15,6 +15,6 @@ nthPrime k n t = if isPrime k
         then k
         else nthPrime (k + 1) (n + 1) t
     else nthPrime (k + 1) n t
-    
+
 -- main :: IO ()
 -- main = print (nthPrime 0 0 10001)
